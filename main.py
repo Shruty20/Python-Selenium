@@ -2,7 +2,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-#keep window open after program finish
+
 
 chrome_option = webdriver.ChromeOptions()
 chrome_option.add_experimental_option("detach", True)
@@ -18,7 +18,7 @@ print(button.size)
 link = driver.find_element(By.ID, value="downloads")
 downloads_link = link.find_element(By.TAG_NAME, "a")
 
-# Get and print the text and href attributes of the <a> element
+
 print("Text:", downloads_link.text)
 print("Href Attribute:", downloads_link.get_attribute("href"))
 
@@ -40,10 +40,10 @@ for n in range(len(event_time)):
         'name':event_name[n].text,
 
     }
-print(events) #it's for selecting group of dates together at once n store in dictionary with event names
+print(events) 
 
-# driver.close()  #closes single tab where you open the page
-driver.quit() #it quits the entire program
+driver.close()  
+driver.quit() 
 
 
 
